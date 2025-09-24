@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Livre - Barbearia de Elite</title>
+    <meta name="description"
+        content="Barbearia Estilo Livre - Cortes modernos, barba estilizada e o melhor atendimento da cidade">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header / Navegação -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <i class="fas fa-cut me-2"></i>Estilo Livre
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sessão Home -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold">Estilo Livre</h1>
+                        <p class="lead">Barbearia de Elite - Tradição, Estilo e Modernidade</p>
+                        <p class="mb-4">Transformamos seu visual com cortes precisos e atendimento personalizado</p>
+                        <a href="#contato" class="btn btn-primary-custom btn-lg">
+                            <i class="fas fa-calendar-alt me-2"></i>Agende Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Sessão Sobre Nós  -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Sobre Nós</h2>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="mb-4">Tradição e Modernidade em Perfeita Harmonia</h3>
+                        <p class="mb-4">
+                            Na <strong>Estilo Livre</strong>, combinamos técnicas clássicas de barbearia com as
+                            tendências mais modernas do mercado.
+                            Há mais de 15 anos, oferecemos um atendimento personalizado e de qualidade excepcional.
+                        </p>
+                        <p class="mb-4">
+                            Nossa equipe é formada por profissionais especializados e apaixonados pela arte da
+                            barbearia.
+                            Utilizamos apenas produtos premium e equipamentos de última geração para garantir os
+                            melhores resultados.
+                        </p>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="text-center p-3">
+                                    <div class="service-icon mb-2"
+                                        style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <h4 class="text-primary mb-1">15+</h4>
+                                    <p class="small mb-0">Anos de Experiência</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-center p-3">
+                                    <div class="service-icon mb-2"
+                                        style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4 class="text-primary mb-1">5000+</h4>
+                                    <p class="small mb-0">Clientes Satisfeitos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image text-center">
+                        <div
+                            style="background: linear-gradient(45deg, #d4a574, #b8860b); padding: 100px; border-radius: 15px; color: white;">
+                            <i class="fas fa-cut" style="font-size: 4rem; margin-bottom: 20px;"></i>
+                            <h4>Ambiente Acolhedor</h4>
+                            <p>Um espaço pensado para seu conforto e bem-estar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão de Serviços -->
+    <section id="servicos" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Nossos Serviços</h2>
+                    <p class="lead mb-5">Oferecemos uma gama completa de serviços para cuidar do seu visual</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Serviço 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h5 class="card-title">Corte de Cabelo</h5>
+                            <p class="card-text">Cortes modernos e clássicos adaptados ao seu estilo e formato do rosto.
+                                Utilizamos técnicas avançadas para realçar sua personalidade.</p>
+                            <ul class="list-unstyled small mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Análise facial personalizada</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Produtos profissionais</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Acabamento impecável</li>
+                            </ul>
+                            <p class="text-primary fw-bold fs-5">A partir de R$ 45,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h5 class="card-title">Barba e Bigode</h5>
+                            <p class="card-text">Aparagem, modelagem e cuidados especiais para sua barba ficar
+                                impecável.</p>
+                            <ul class="list-unstyled small mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Análise facial personalizada</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Produtos profissionais</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Acabamento impecável</li>
+                            </ul>
+                            <p class="text-primary fw-bold">A partir de R$ 30,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-shower"></i>
+                            </div>
+                            <h5 class="card-title">Hidratação</h5>
+                            <p class="card-text">Tratamentos especiais para cabelo e barba com produtos premium.</p>
+                            <ul class="list-unstyled small mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Análise facial personalizada</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Produtos profissionais</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Acabamento impecável</li>
+                            </ul>
+                            <p class="text-primary fw-bold">A partir de R$ 35,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h5 class="card-title">Coloração</h5>
+                            <p class="card-text">Coloração profissional e retoque de raiz com produtos de alta
+                                qualidade.</p>
+                            <ul class="list-unstyled small mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Análise facial personalizada</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Produtos profissionais</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Acabamento impecável</li>
+                            </ul>
+                            <p class="text-primary fw-bold">A partir de R$ 80,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <h5 class="card-title">Relaxamento</h5>
+                            <p class="card-text">Massagem relaxante no couro cabeludo e tratamento anti-stress.</p>
+                            <ul class="list-unstyled small mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Análise facial personalizada</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Produtos profissionais</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Acabamento impecável</li>
+                            </ul>
+                            <p class="text-primary fw-bold">A partir de R$ 40,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h5 class="card-title">Pacote Completo</h5>
+                            <p class="card-text">Corte + barba + hidratação + relaxamento. O tratamento completo.</p>
+                            <ul class="list-unstyled small mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Análise facial personalizada</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Produtos profissionais</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Acabamento impecável</li>
+                            </ul>
+                            <p class="text-primary fw-bold">R$ 120,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão de Depoimentos -->
+    <section id="depoimentos" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">O que nossos clientes dizem</h2>
+                    <p class="lead mb-5">A satisfação dos nossos clientes é nossa maior recompensa</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Depoimento 1 -->
+                            <div class="carousel-item active">
+                                <div class="testimonial-item">
+                                    <p class="testimonial-text">
+                                        "Excelente atendimento! A equipe é super profissional e o ambiente é muito
+                                        acolhedor.
+                                        Meu corte ficou perfeito, exatamente como eu queria. Recomendo muito!"
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <strong>Leonardo</strong>
+                                        <br><small>Cliente há 3 anos</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Depoimento 2 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-item">
+                                    <p class="testimonial-text">
+                                        "A Estilo Livre é sem dúvida a melhor barbearia da região. Profissionais
+                                        qualificados,
+                                        produtos de qualidade e um preço justo. Sempre saio de lá renovado!"
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <strong>Rodrigo</strong>
+                                        <br><small>Cliente há 5 anos</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Depoimento 3 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-item">
+                                    <p class="testimonial-text">
+                                        "Ambiente diferenciado, atendimento personalizado e resultado impecável.
+                                        A barbearia que eu procurava há muito tempo. Parabéns pela excelência!"
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <strong>Sérgio</strong>
+                                        <br><small>Cliente há 2 anos</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controles do Carousel -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                        <!-- Indicadores -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Galeria/Portfolio -->
+    <section id="galeria" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Nossa Galeria</h2>
+                    <p class="lead mb-5">Confira alguns dos nossos trabalhos e o ambiente acolhedor da nossa barbearia
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Galeria Item 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item position-relative overflow-hidden rounded-3 shadow">
+                        <img src="images/corte-social-masculino01.jpg" alt="Corte Social Masculino"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                            style="background: rgba(0,0,0,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <div class="text-center text-white">
+                                <h5>Cortes Modernos</h5>
+                                <p>Técnicas contemporâneas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeria Item 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item position-relative overflow-hidden rounded-3 shadow">
+                        <img src="images/barba-estilizada.jpg" alt="Barba Estilizada"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                            style="background: rgba(0,0,0,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <div class="text-center text-white">
+                                <h5>Barba Estilizada</h5>
+                                <p>Cuidado profissional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeria Item 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item position-relative overflow-hidden rounded-3 shadow">
+                        <img src="images/relaxamento-spa.jpg" alt="Relaxamento e Spa"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                            style="background: rgba(0,0,0,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <div class="text-center text-white">
+                                <h5>Relaxamento</h5>
+                                <p>Momentos de bem-estar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeria Item 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item position-relative overflow-hidden rounded-3 shadow">
+                        <img src="images/ambiente-barbearia.jpg" alt="Ambiente da Barbearia"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                            style="background: rgba(0,0,0,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <div class="text-center text-white">
+                                <h5>Ambiente Acolhedor</h5>
+                                <p>Conforto e elegância</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeria Item 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item position-relative overflow-hidden rounded-3 shadow">
+                        <img src="images/equipamentos-ferramentas.webp" alt="Equipamentos e Ferramentas"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                            style="background: rgba(0,0,0,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <div class="text-center text-white">
+                                <h5>Equipamentos</h5>
+                                <p>Tecnologia de ponta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeria Item 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item position-relative overflow-hidden rounded-3 shadow">
+                        <img src="images/excelencia-qualidade.png" alt="Excelência e Qualidade"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                            style="background: rgba(0,0,0,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <div class="text-center text-white">
+                                <h5>Excelência</h5>
+                                <p>Qualidade reconhecida e você feliz</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão de Contato -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p class="lead mb-5">Agende seu horário ou tire suas dúvidas conosco</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Informações de Contato -->
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Informações de Contato</h4>
+
+                        <div class="contact-item d-flex align-items-center mb-3">
+                            <div class="service-icon me-3" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h6>Endereço</h6>
+                                <p class="mb-0">Avenida Ayrton Senna da Silva, 308 <br>Pernambuco - PE , 01234-567</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item d-flex align-items-center mb-3">
+                            <div class="service-icon me-3" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h6>Telefone</h6>
+                                <p class="mb-0">(81) 9 9999-9999</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item d-flex align-items-center mb-3">
+                            <div class="service-icon me-3" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h6>E-mail</h6>
+                                <p class="mb-0">contato@estilolivre.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item d-flex align-items-center">
+                            <div class="service-icon me-3" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6>Horário de Funcionamento</h6>
+                                <p class="mb-0">
+                                    Segunda à Sexta: 08h às 20h<br>
+                                    Sábado: 08h às 18h<br>
+                                    Domingo: Fechado
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Contato -->
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h4 class="mb-4">Envie uma Mensagem</h4>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nome" class="form-label">Nome Completo</label>
+                                    <input type="text" class="form-control" id="nome" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefone" class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="telefone">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="servico" class="form-label">Serviço de Interesse</label>
+                                <select class="form-control" id="servico">
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="corte">Corte de Cabelo</option>
+                                    <option value="barba">Barba e Bigode</option>
+                                    <option value="hidratacao">Hidratação</option>
+                                    <option value="coloracao">Coloração</option>
+                                    <option value="relaxamento">Relaxamento</option>
+                                    <option value="pacote">Pacote Completo</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" rows="5"
+                                    placeholder="Descreva suas necessidades ou tire suas dúvidas..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer/Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-cut me-2"></i>Estilo Livre</h5>
+                    <p>A melhor barbearia da região, oferecendo serviços de qualidade premium com atendimento
+                        personalizado há mais de 15 anos.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/?locale=pt_BR" class="me-3"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5581999999999" class="me-3"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Serviços</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#servicos">Corte de Cabelo</a></li>
+                        <li><a href="#servicos">Barba e Bigode</a></li>
+                        <li><a href="#servicos">Hidratação</a></li>
+                        <li><a href="#servicos">Coloração</a></li>
+                        <li><a href="#servicos">Relaxamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contato</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Avenida Ayrton Senna, 308 - PE - Brasil</p>
+                    <p><i class="fas fa-phone me-2"></i>(81) 9 9999-9999</p>
+                    <p><i class="fas fa-envelope me-2"></i>contato@estilolivre.com.br</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>&copy; 2025 Estilo Livre - Barbearia de Elite | Desenvolvido por Rodrigo Albuquerque | Todos os
+                        direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Advanced Features JavaScript -->
+    <script src="js/advanced.js"></script>
+
+    <!-- JavaScript Personalizado -->
+    <script>
+        // INICIALIZAÇÃO  
+        document.addEventListener('DOMContentLoaded', function () {
+            // Remover loading spinner
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                if (loading) {
+                    loading.classList.remove('show');
+                    document.body.style.overflow = 'visible';
+                }
+            }, 1000);
+
+            // Inicializar animações
+            initScrollAnimations();
+        });
+
+        // SMOOTH SCROLLING
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Compensar navbar fixa
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // NAVBAR E SCROLL TO TOP
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            const scrollTop = document.getElementById('scrollTop');
+
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+                if (scrollTop) scrollTop.classList.add('show');
+            } else {
+                navbar.classList.remove('scrolled');
+                if (scrollTop) scrollTop.classList.remove('show');
+            }
+
+            // Atualizar navbar ativa
+            updateActiveNavLink();
+        });
+
+        // Botão scroll to top
+        const scrollTopBtn = document.getElementById('scrollTop');
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // ATUALIZAR LINK ATIVO DA NAVBAR
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // ANIMAÇÕES NO SCROLL 
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+
+                        // Animação especial para contadores
+                        if (entry.target.querySelector('h4')) {
+                            animateCounters(entry.target);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos com animação
+            document.querySelectorAll('.service-card, .testimonial-item, .contact-form, .contact-info, .gallery-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        }
+
+        // ANIMAÇÃO DE CONTADORES
+        function animateCounters(section) {
+            const countElements = section.querySelectorAll('h4');
+            countElements.forEach(element => {
+                const finalValue = element.textContent.replace('+', '');
+                if (!isNaN(finalValue)) {
+                    animateCounter(element, 0, parseInt(finalValue), 2000);
+                }
+            });
+        }
+
+        function animateCounter(element, start, end, duration) {
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const current = Math.floor(progress * (end - start) + start);
+
+                element.textContent = current + '+';
+
+                if (progress < 1) {
+                    requestAnimationFrame(animation);
+                }
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // VALIDAÇÃO AVANÇADA DO FORMULÁRIO 
+        const form = document.querySelector('form');
+        if (form) {
+            // Adicionar validação em tempo real
+            const inputs = form.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                input.addEventListener('blur', validateField);
+                input.addEventListener('input', clearErrors);
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const nome = document.getElementById('nome');
+                const email = document.getElementById('email');
+                const mensagem = document.getElementById('mensagem');
+
+                let isValid = true;
+
+                // Validar nome
+                if (!nome.value.trim()) {
+                    showError(nome, 'Nome é obrigatório');
+                    isValid = false;
+                } else if (nome.value.trim().length < 2) {
+                    showError(nome, 'Nome deve ter pelo menos 2 caracteres');
+                    isValid = false;
+                }
+
+                // Validar email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim()) {
+                    showError(email, 'E-mail é obrigatório');
+                    isValid = false;
+                } else if (!emailRegex.test(email.value)) {
+                    showError(email, 'E-mail inválido');
+                    isValid = false;
+                }
+
+                // Validar mensagem
+                if (!mensagem.value.trim()) {
+                    showError(mensagem, 'Mensagem é obrigatória');
+                    isValid = false;
+                } else if (mensagem.value.trim().length < 10) {
+                    showError(mensagem, 'Mensagem deve ter pelo menos 10 caracteres');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // Mostrar loading
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+                    submitBtn.disabled = true;
+
+                    // Simular envio (substituir por integração real)
+                    setTimeout(() => {
+                        showSuccess('Mensagem enviada com sucesso! Nossa equipe entrará em contato em breve.');
+                        form.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                }
+            });
+        }
+
+        //Funções de validação
+        function validateField(e) {
+            const field = e.target;
+            clearErrors(e);
+
+            if (field.hasAttribute('required') && !field.value.trim()) {
+                showError(field, 'Este campo é obrigatório');
+            }
+        }
+
+        function clearErrors(e) {
+            const field = e.target;
+            const existingError = field.parentNode.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            field.classList.remove('is-invalid');
+        }
+
+        function showError(field, message) {
+            field.classList.add('is-invalid');
+
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message text-danger small mt-1';
+            errorDiv.textContent = message;
+
+            field.parentNode.appendChild(errorDiv);
+        }
+
+        function showSuccess(message) {
+            // Criar aviso de sucesso
+            const toast = document.createElement('div');
+            toast.className = 'alert alert-success position-fixed';
+            toast.style.cssText = `
+                top: 100px;
+                right: 20px;
+                z-index: 9999;
+                min-width: 300px;
+                animation: slideInRight 0.5s ease;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            `;
+            toast.innerHTML = `
+                <i class="fas fa-check-circle me-2"></i>
+                ${message}
+                <button type="button" class="btn-close ms-2" onclick="this.parentElement.remove()"></button>
+            `;
+
+            document.body.appendChild(toast);
+
+            // Remover automaticamente após 5 segundos
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.style.animation = 'slideOutRight 0.5s ease';
+                    setTimeout(() => toast.remove(), 500);
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>
