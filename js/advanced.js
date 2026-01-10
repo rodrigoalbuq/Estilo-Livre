@@ -368,26 +368,12 @@ function initDarkMode() {
     }
 
     const btn = document.createElement('button');
-    btn.className = 'dark-mode-toggle position-fixed';
-    btn.style.cssText = `
-        bottom: 90px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: none;
-        background: var(--gold-gradient);
-        color: white;
-        font-size: 1.2rem;
-        cursor: pointer;
-        z-index: 1000;
-        transition: all 0.3s ease;
-        box-shadow: var(--shadow-gold);
-    `;
+    btn.className = 'dark-mode-toggle';
     const setIcon = () => {
+        const small = (window.matchMedia && window.matchMedia('(max-width: 768px)').matches);
         btn.innerHTML = document.body.classList.contains('dark-mode')
-            ? '<i class="fas fa-sun"></i>'
-            : '<i class="fas fa-moon"></i>';
+            ? `<i class="fas fa-sun${small ? ' fa-sm' : ''}"></i>`
+            : `<i class="fas fa-moon${small ? ' fa-sm' : ''}"></i>`;
         btn.title = document.body.classList.contains('dark-mode') ? 'Tema claro' : 'Tema escuro';
     };
     setIcon();
@@ -417,7 +403,55 @@ function initDarkMode() {
         try { localStorage.setItem('theme', toDark ? 'dark' : 'light'); } catch { }
         setIcon();
     });
-    document.body.appendChild(btn);
+    // Posicionamento responsivo: no mobile (<=768px) coloca ao lado do botão de menu da navbar.
+    const isMobile = () => window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
+    function placeToggle() {
+        const navbarContainer = document.querySelector('.navbar .container');
+        const navbarToggler = navbarContainer ? navbarContainer.querySelector('.navbar-toggler') : null;
+
+        if (isMobile() && navbarContainer && navbarToggler) {
+            // Estilo como botão de navbar (sem posição fixa)
+            btn.className = 'dark-mode-toggle btn btn-light btn-sm';
+            btn.style.cssText = '';
+            btn.setAttribute('aria-label', 'Alternar tema');
+            // Inserir ao lado do toggler
+            if (btn.parentElement !== navbarContainer) {
+                // Antes do botão de menu para ficar à esquerda
+                navbarToggler.insertAdjacentElement('beforebegin', btn);
+            }
+        } else {
+            // Estilo flutuante para desktop
+            btn.className = 'dark-mode-toggle position-fixed';
+            btn.style.cssText = `
+                bottom: 90px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                background: var(--gold-gradient);
+                color: white;
+                font-size: 1.2rem;
+                cursor: pointer;
+                z-index: 1000;
+                transition: all 0.3s ease;
+                box-shadow: var(--shadow-gold);
+            `;
+            if (btn.parentElement !== document.body) {
+                document.body.appendChild(btn);
+            }
+        }
+        setIcon();
+    }
+
+    // Inicial e em redimensionamentos (com leve debounce)
+    placeToggle();
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(placeToggle, 150);
+    });
 }
 
 function initLazyLoading() {

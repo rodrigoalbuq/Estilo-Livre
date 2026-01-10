@@ -36,7 +36,8 @@ python -m http.server 5500
 ## Tema Claro/Escuro
 
 - **Sem flash:** Script no `<head>` de [index.html](index.html) aplica o tema antes do primeiro paint
-- **Toggle confiável:** Botão flutuante recriado por [js/advanced.js](js/advanced.js) e sincronizado em `html` e `body`
+- **Toggle confiável:** Botão de tema recriado por [js/advanced.js](js/advanced.js) e sincronizado em `html` e `body`
+- **Mobile:** No modo mobile (≤768px), o botão de alternar tema aparece imediatamente ao lado (à esquerda) do botão de menu da navbar; sem borda, sem fundo e tamanho compacto (36x36)
 - **Transição suave:** Duração via `--theme-transition-duration` e easing via `--theme-transition-ease` em [css/style.css](css/style.css)
 - **Acessibilidade:** Transições desativadas quando `prefers-reduced-motion: reduce`
 
@@ -68,6 +69,8 @@ python -m http.server 5500
 - Validação de telefone para mínimo 11 dígitos
 - Corrigida inicialização imediata das features e robustez do modal
 - Ajustado smooth scrolling para não interceptar links de modal
+- Mobile UI: ocultados os botões flutuantes de WhatsApp e "scroll-top" no mobile; botão de alternância de tema reposicionado para ficar exatamente ao lado do botão de menu (sem borda/fundo, 36x36); remoção de efeitos de hover/active no mobile
+- CSS: correção de sintaxe na regra `transition` do overlay da galeria para evitar avisos de semicolons; ajustes de tamanho e centralização do `navbar-toggler`
 
 ## Screenshots
 

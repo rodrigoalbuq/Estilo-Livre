@@ -602,7 +602,7 @@ section {
 
 /* Transição suave de opacidade e cor do overlay */
 .gallery-overlay {
-    transition: opacity var(--transition-fast) !important,
+    transition: opacity var(--transition-fast),
                 background-color var(--transition-fast) !important;
 }
 
@@ -1073,6 +1073,10 @@ p.card-2 {
 }
 
 @media (max-width: 768px) {
+    /* Agrupar itens da navbar sem espaçamentos distribuídos */
+    .navbar .container {
+        justify-content: flex-start !important;
+    }
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -1113,6 +1117,73 @@ p.card-2 {
 
     .carousel-control-next {
         right: -25px;
+    }
+
+    /* Mobile: esconder botões flutuantes */
+    .whatsapp-float,
+    .scroll-top {
+        display: none !important;
+    }
+
+    /* Mobile: remover bordas dos botões de navbar e tema */
+    .navbar-toggler {
+        border: none !important;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 0.25rem !important;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+    .navbar-toggler .navbar-toggler-icon {
+        width: 20px !important;
+        height: 20px !important;
+        background-size: 20px 20px !important;
+    }
+    .dark-mode-toggle,
+    .dark-mode-toggle.btn,
+    .dark-mode-toggle.btn-light,
+    .dark-mode-toggle.btn-outline-light {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        color: #ffffff !important;
+        padding: 0.25rem 0.5rem !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 0.25rem !important;
+        transition: none !important;
+        margin-right: 0 !important;
+        margin-left: auto !important; /* empurra o grupo para a direita */
+    }
+    .dark-mode-toggle i {
+        line-height: 1 !important;
+    }
+
+    /* Remover hover/active no mobile */
+    .navbar-toggler,
+    .dark-mode-toggle {
+        transition: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .navbar-toggler:hover,
+    .dark-mode-toggle:hover {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .navbar-toggler:active,
+    .dark-mode-toggle:active {
+        transform: none !important;
     }
 }
 
