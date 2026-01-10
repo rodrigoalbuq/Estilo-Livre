@@ -48,7 +48,7 @@ python -m http.server 5500
 - **Data:** `min` definido para amanhã; envio só permite data estritamente futura
 - **Telefone:** exige no mínimo 11 dígitos (DDD + número)
 - **Calendário:** botão de ícone ao lado do campo de data abre o seletor nativo
-- **Confirmação:** ao enviar, exibe um resumo com agradecimento (sem ícone de coração)
+- **Confirmação:** ao enviar, exibe um resumo com agradecimento 
 - **Fechamento:** restaura o formulário ao fechar e limpa qualquer backdrop residual
 
 ## Galeria
