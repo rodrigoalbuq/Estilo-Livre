@@ -1,3 +1,75 @@
+#bookingModal .modal-footer {
+    align-items: center !important;
+}
+/* Booking Modal: aparência idêntica nos dois temas */
+#bookingModal .modal-content {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-medium);
+}
+
+.dark-mode #bookingModal .modal-content {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+#bookingModal .modal-header {
+    background: var(--gold-gradient) !important;
+    color: #ffffff !important;
+}
+
+#bookingModal .modal-title {
+    color: #ffffff !important;
+}
+
+#bookingModal .form-label {
+    color: #2c2c2c !important;
+}
+
+#bookingModal .form-control {
+    background-color: #fafafa !important;
+    color: #000000 !important;
+    border: 2px solid #e9ecef !important;
+}
+
+#bookingModal .form-control:focus,
+#bookingModal .form-control:active,
+#bookingModal .form-control:focus-visible {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: var(--primary-gold) !important;
+    box-shadow: 0 0 0 0.3rem rgba(212, 165, 116, 0.25) !important;
+}
+
+/* Booking Modal: hover do botão menos intenso */
+#bookingModal .btn-primary-custom:hover {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(212, 165, 116, 0.35);
+}
+
+/* Booking Modal: botão confirmar com largura mínima e centralização */
+#bookingModal .btn-primary-custom {
+    min-width: 220px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Booking Modal: backdrop uniforme em ambos os temas */
+.modal-backdrop {
+    background-color: #000000 !important;
+    backdrop-filter: blur(2px);
+}
+
+.modal-backdrop.show {
+    opacity: 0.6 !important;
+}
+
+.dark-mode .modal-backdrop {
+    background-color: #000000 !important;
+}
 /* ESTILO LIVRE - BARBEARIA DE ELITE */
 /* CSS Moderno e Responsivo com Animações Avançadas */
 
@@ -10,8 +82,6 @@
     --deep-black: #1a1a1a;
     --light-gray: #f8f9fa;
     --white: #ffffff;
-    --success-green: #28a745;
-    --warning-orange: #fd7e14;
 
     /* Gradientes */
     --gold-gradient: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
@@ -26,10 +96,15 @@
     /* Transições */
     --transition-fast: 0.3s ease;
     --transition-slow: 0.6s ease;
+    --theme-transition-duration: 0.35s;
+    --theme-transition-ease: cubic-bezier(0.2, 0.0, 0.2, 1);
 
     /* Fontes */
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-display: 'Georgia', 'Times New Roman', serif;
+
+    /* Indica ao user-agent os esquemas suportados e preferido inicial */
+    color-scheme: light;
 }
 
 /* Reset e Base */
@@ -50,17 +125,49 @@ body {
     overflow-x: hidden;
 }
 
-/* Utilitários */
-.text-gold {
-    color: var(--primary-gold) !important;
+/* Transição suave apenas durante troca de tema (escopo restrito) */
+.theme-transition body,
+.theme-transition .navbar,
+.theme-transition section,
+.theme-transition .card,
+.theme-transition .service-card,
+.theme-transition .hero-section,
+.theme-transition .testimonial-carousel,
+.theme-transition .contact-form,
+.theme-transition .footer,
+.theme-transition .modal,
+.theme-transition .modal-content,
+.theme-transition .modal-backdrop,
+.theme-transition .form-control {
+    transition: background-color var(--theme-transition-duration) var(--theme-transition-ease),
+                color var(--theme-transition-duration) var(--theme-transition-ease),
+                border-color var(--theme-transition-duration) var(--theme-transition-ease),
+                box-shadow calc(var(--theme-transition-duration) - 0.05s) var(--theme-transition-ease),
+                fill var(--theme-transition-duration) var(--theme-transition-ease),
+                stroke var(--theme-transition-duration) var(--theme-transition-ease);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .theme-transition body,
+    .theme-transition .navbar,
+    .theme-transition section,
+    .theme-transition .card,
+    .theme-transition .service-card,
+    .theme-transition .hero-section,
+    .theme-transition .testimonial-carousel,
+    .theme-transition .contact-form,
+    .theme-transition .footer,
+    .theme-transition .modal,
+    .theme-transition .modal-content,
+    .theme-transition .modal-backdrop,
+    .theme-transition .form-control {
+        transition: none !important;
+    }
+}
+
+/* Utilitários */
 .bg-gold {
     background: var(--gold-gradient) !important;
-}
-
-.bg-dark-custom {
-    background: var(--dark-gradient) !important;
 }
 
 /* Animações Personalizadas */
@@ -415,6 +522,11 @@ section {
     transform: rotateY(180deg) scale(1.1);
 }
 
+/* Sobre Nós: desabilitar transformação no hover para ícones estáveis */
+#sobre .service-icon:hover {
+    transform: none;
+}
+
 .service-card .card-title {
     font-size: 1.4rem;
     font-weight: 600;
@@ -425,6 +537,15 @@ section {
 .service-card .card-text {
     color: #6c757d;
     margin-bottom: 1.5rem;
+}
+
+/* Modo escuro: texto dos cards legível */
+.dark-mode .service-card .card-title {
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .service-card .card-text {
+    color: #e2e8f0 !important;
 }
 
 /* Remove sublinhados dos itens da seção de serviços */
@@ -452,6 +573,11 @@ section {
     overflow: hidden;
 }
 
+.gallery-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+}
+
 .gallery-item:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-heavy);
@@ -459,6 +585,8 @@ section {
 
 .gallery-item:hover .gallery-overlay {
     opacity: 1 !important;
+    /* Tom de preto mais claro ao passar o mouse */
+    background: rgba(0, 0, 0, 0.55) !important;
 }
 
 .gallery-overlay h5 {
@@ -470,6 +598,12 @@ section {
     margin-bottom: 0;
     font-size: 0.9rem;
     opacity: 0.9;
+}
+
+/* Transição suave de opacidade e cor do overlay */
+.gallery-overlay {
+    transition: opacity var(--transition-fast) !important,
+                background-color var(--transition-fast) !important;
 }
 
 /* Carousel de Depoimentos */
@@ -636,7 +770,7 @@ section {
     transition: color var(--transition-fast);
 }
 
-.footer a:hover {
+.footer ul.list-unstyled li a:hover {
     color: var(--primary-gold);
     text-decoration: none;
     transform: translateX(5px);
@@ -668,6 +802,7 @@ section {
 .social-links a:hover {
     transform: translateY(-5px) scale(1.1);
     box-shadow: var(--shadow-gold);
+    color: var(--white) !important; /* manter ícones brancos no hover */
 }
 
 /* Loading Spinner */
@@ -774,6 +909,8 @@ section {
     --light-gray: #2d3748;
     --white: #1a202c;
     --dark-charcoal: #e2e8f0;
+    /* Indica esquema escuro para componentes nativos */
+    color-scheme: dark;
 }
 
 .dark-mode .navbar {
@@ -816,98 +953,95 @@ section {
 
 .dark-mode .hero-section p,
 .dark-mode section p:not(.lead):not(.mb-0) {
-    color: var(--primary-gold) !important;
+    color: var(--dark-charcoal) !important;
 }
 
-/* Modo Claro - Footer com Texto Preto */
-body:not(.dark-mode) .footer p,
-body:not(.dark-mode) .footer a {
-    color: #ffffff !important;
-}
+/* Modo claro removido: footer regras não são necessárias */
 
-/* Títulos em preto negrito no modo claro */
-body:not(.dark-mode) .footer h5 {
+
+/* Sobre Nós: parágrafos com fundo claro devem ser pretos */
+.dark-mode #sobre .about-content p {
     color: #000000 !important;
-    font-weight: 700 !important;
 }
 
-body:not(.dark-mode) .footer a:hover {
-    color: var(--primary-gold) !important;
-}
-
-/* Modo Claro - Itens da Lista dos Serviços em Branco */
-body:not(.dark-mode) .service-card ul li {
-    color: #ffffff !important;
-}
-
-body:not(.dark-mode) .service-card ul li .fas {
-    color: #ffffff !important;
-}
-
-/* Modo Claro - Parágrafo Lead */
-body:not(.dark-mode) p.lead {
-    color: var(--primary-gold) !important;
-    font-weight: 500 !important;
-}
-
-/* Modo Claro - Outros Textos em Amarelo */
-body:not(.dark-mode) .hero-section p,
-body:not(.dark-mode) section p:not(.lead):not(.mb-0) {
-    color: var(--primary-gold) !important;
-}
-
-/* Modo Claro - Título Sobre Nós em Preto */
-body:not(.dark-mode) #sobre .section-title {
+/* Sobre Nós: números dos ícones (h4.text-primary) em preto para contraste */
+.dark-mode #sobre .about-content .text-center h4.text-primary {
     color: #000000 !important;
+}
+
+/* Parágrafos legíveis no bloco de Contato */
+.dark-mode #contato .contact-info p,
+.dark-mode .contact-item p {
+    color: var(--dark-charcoal) !important;
+}
+
+/* Listas de serviços legíveis */
+.dark-mode .service-card ul li {
+    color: #e2e8f0 !important;
+}
+
+/* Texto de depoimentos com alto contraste */
+.dark-mode .testimonial-text {
+    color: var(--dark-charcoal) !important;
 }
 
 /* Todos os Títulos das Seções em Preto - Modo Claro e Escuro */
-body:not(.dark-mode) .section-title,
-.dark-mode .section-title {
+/* Títulos das seções em preto (todos os temas) */
+.section-title {
     color: #000000 !important;
 }
 
 /* Todos os headings H3 em Preto - Modo Claro e Escuro */
-body:not(.dark-mode) h3,
-.dark-mode h3 {
+/* Subtítulos H3 em preto (todos os temas) */
+h3 {
     color: #000000 !important;
 }
 
-/* Título "Informações de Contato" em Preto - Modo Claro e Escuro */
-body:not(.dark-mode) .contact-info h4,
-.dark-mode .contact-info h4 {
+
+/* Título bloco Contato em preto (todos os temas) */
+.contact-info h4 {
     color: #000000 !important;
 }
 
-/* Texto do Card "Ambiente Acolhedor" em Preto */
-body:not(.dark-mode) .about-image .text-center div p,
+
 .dark-mode .about-image .text-center div p,
-body:not(.dark-mode) .col-lg-6 .about-image div p,
 .dark-mode .col-lg-6 .about-image div p {
+    color: #e2e8f0 !important;
+}
+
+/* Sobre Nós: parágrafo "Ambiente Acolhedor" em preto */
+#sobre .about-image .text-center div p {
     color: #000000 !important;
 }
 
-/* Texto Pequeno em Preto */
-body:not(.dark-mode) .about-content .text-center p.small,
+/* Reforço: garantir preto no tema escuro também */
+.dark-mode #sobre .about-image .text-center div p {
+    color: #000000 !important;
+}
+
+/* Parágrafo com classe card-2 em preto */
+p.card-2 {
+    color: #000000 !important;
+}
+
+
+
+
+
 .dark-mode .about-content .text-center p.small,
-body:not(.dark-mode) .about-content .col-6 p.small,
 .dark-mode .about-content .col-6 p.small {
-    color: #000000 !important;
+    color: #e2e8f0 !important;
 }
 
-/* Números "15+" E "5000+" em Preto */
-body:not(.dark-mode) .about-content .text-center h4.text-primary,
+
+
 .dark-mode .about-content .text-center h4.text-primary,
-body:not(.dark-mode) .about-content .col-6 h4.text-primary,
 .dark-mode .about-content .col-6 h4.text-primary {
-    color: #000000 !important;
+    color: #f1f1f1 !important;
 }
 
 /* H3 "TRADIÇÃO E MODERNIDADE" EM AMARELO */
-body:not(.dark-mode) .about-content h3,
-.dark-mode .about-content h3 {
-    color: var(--primary-gold) !important;
-}
+/* Removido: manter todos os títulos em preto */
 
 /*  Responsividade */
 @media (max-width: 1200px) {
@@ -1016,6 +1150,13 @@ body:not(.dark-mode) .about-content h3,
         width: 45px;
         height: 45px;
     }
+
+    /* Booking Modal: largura menor do botão em telas pequenas */
+    #bookingModal .btn-primary-custom {
+        min-width: 180px;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
 }
 
 /* Acessibilidade */
@@ -1037,14 +1178,7 @@ body:not(.dark-mode) .about-content h3,
     will-change: transform;
 }
 
-/* Modo Escuro (Extra) */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --light-gray: #2d3748;
-        --white: #1a202c;
-        --dark-charcoal: #e2e8f0;
-    }
-}
+/* Tema escuro padrão ativo; */
 
 /* Print Styles */
 @media print {
