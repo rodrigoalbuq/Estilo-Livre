@@ -69,7 +69,7 @@ python -m http.server 5500
 - Validação de telefone para mínimo 11 dígitos
 - Corrigida inicialização imediata das features e robustez do modal
 - Ajustado smooth scrolling para não interceptar links de modal
-- Mobile UI: ocultados os botões flutuantes de WhatsApp e "scroll-top" no mobile; botão de alternância de tema reposicionado para ficar exatamente ao lado do botão de menu (sem borda/fundo, 36x36); remoção de efeitos de hover/active no mobile
+- Mobile UI: ocultados os botões flutuantes de WhatsApp e "scroll-top"; botão de alternância de tema reposicionado para ficar exatamente ao lado do botão de menu (sem borda/fundo, 36x36); remoção de efeitos de hover/active no mobile
 - CSS: correção de sintaxe na regra `transition` do overlay da galeria para evitar avisos de semicolons; ajustes de tamanho e centralização do `navbar-toggler`
 
 ## Screenshots
