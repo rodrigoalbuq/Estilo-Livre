@@ -362,16 +362,17 @@ body {
     right: 0;
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="barber" patternUnits="userSpaceOnUse" width="20" height="20"><rect fill="%23d4a574" width="20" height="20" opacity="0.05"/><path d="M0 20L20 0M-5 5L5 -5M15 25L25 15" stroke="%23b8860b" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23barber)"/></svg>') repeat;
-    animation: slide 20s linear infinite;
+    background-position: 0 0;
+    will-change: background-position;
+    animation: patternScroll 20s linear infinite;
 }
 
-@keyframes slide {
+@keyframes patternScroll {
     0% {
-        transform: translateX(0);
+        background-position: 0 0;
     }
-
     100% {
-        transform: translateX(-40px);
+        background-position: -40px 0;
     }
 }
 
