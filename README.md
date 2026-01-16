@@ -1,4 +1,4 @@
-# Estilo Livre — Site da Barbearia estilo-livre.vercel.app
+# Estilo Livre — Site da Barbearia 
 
 Projeto estático para a Barbearia Estilo Livre com experiência moderna, acessível e rápida. Inclui alternância suave de tema, modal de agendamento com resumo e validações, galeria otimizada e melhorias de UX.
 
