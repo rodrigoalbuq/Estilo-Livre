@@ -99,11 +99,16 @@ Breve print do sistema:
 - Resumo: texto de agradecimento correto e sem ícones extras
 - Telefone: máscara e validação (11 dígitos) funcionando
 - Data: seletor abre pelo botão e validação de futura ativa
+  
 
-🤝 Contribuições
+Contribuições
+
 Contribuições são bem-vindas! Agradeço desde já. Sinta-se à vontade para:
 
 1.Fork o projeto
+
 2.Crie uma feature branch
+
 3.Faça commit das mudanças
+
 4.Abra um Pull Request
