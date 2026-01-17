@@ -101,14 +101,11 @@ Breve print do sistema:
 - Data: seletor abre pelo botão e validação de futura ativa
   
 
-Contribuições
+## 🤝 Contribuições
 
 Contribuições são bem-vindas! Agradeço desde já. Sinta-se à vontade para:
 
-1.Fork o projeto
-
-2.Crie uma feature branch
-
-3.Faça commit das mudanças
-
-4.Abra um Pull Request
+1. **Fork** o projeto
+2. **Crie** uma feature branch
+3. **Faça commit** das mudanças
+4. **Abra** um Pull Request
